@@ -11,18 +11,18 @@ export const RESUME_DATA: ResumeData = {
   avatarUrl: "",
   personalWebsiteUrl: "",
   contact: {
-    email: "angkswnstn@gmail.com",
-    tel: "+16502835198",
+    email: "junsuim93@gmail.com",
+    tel: "",
     social: [
       {
-        name: "GitHub",
-        url: "https://github.com",
-        icon: "github",
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/junsu-im-10002b13b/",
+        icon: "linkedin",
       },
       {
-        name: "LinkedIn",
-        url: "https://linkedin.com",
-        icon: "linkedin",
+        name: "Google Scholar",
+        url: "https://scholar.google.com/citations?user=liyI8F0AAAAJ&hl=en",
+        icon: "globe",
       },
     ],
   },
