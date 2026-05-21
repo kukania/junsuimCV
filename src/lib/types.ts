@@ -29,18 +29,52 @@ export interface ResumeData {
     degree: string;
     start: string;
     end: string;
+    details?: readonly string[];
   }>;
   work: Array<{
     company: string;
     link: string;
     badges: string[];
     title: string;
+    location: string;
     start: string;
     end: string | null;
     description: string;
     highlights?: readonly string[];
   }>;
   skills: string[];
+  publications: Array<{
+    title: string;
+    authors: string;
+    venue: string;
+    year: string;
+    note?: string;
+    link?: string;
+  }>;
+  domesticPublications: Array<{
+    title: string;
+    authors: string;
+    venue: string;
+    year: string;
+  }>;
+  patents: Array<{
+    title: string;
+    authors: string;
+    patentNumber: string;
+    year: string;
+  }>;
+  awards: Array<{
+    title: string;
+    organization: string;
+    date: string;
+    location: string;
+  }>;
+  grants: Array<{
+    title: string;
+    organization: string;
+    date: string;
+    location: string;
+  }>;
   projects: Array<{
     title: string;
     techStack: string[];

@@ -124,17 +124,24 @@ interface PrintContactProps {
 function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   return (
     <div className="hidden gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px]">
-      {personalWebsiteUrl && (
-        <>
-          <a
-            className="underline hover:text-foreground/70"
-            href={personalWebsiteUrl}
-          >
-            {new URL(personalWebsiteUrl).hostname}
-          </a>
-          <span aria-hidden="true">/</span>
-        </>
-      )}
+      {personalWebsiteUrl && (() => {
+        try {
+          const hostname = new URL(personalWebsiteUrl).hostname;
+          return (
+            <>
+              <a
+                className="underline hover:text-foreground/70"
+                href={personalWebsiteUrl}
+              >
+                {hostname}
+              </a>
+              <span aria-hidden="true">/</span>
+            </>
+          );
+        } catch {
+          return null;
+        }
+      })()}
       {contact.email && (
         <>
           <a

@@ -88,7 +88,7 @@ interface WorkExperienceItemProps {
  * Handles responsive layout for badges (mobile/desktop)
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description, highlights } =
+  const { company, link, badges, title, location, start, end, description, highlights } =
     work;
 
   return (
@@ -102,7 +102,10 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
               badges={badges}
             />
           </h3>
-          <WorkPeriod start={start} end={end} />
+          <div className="text-right shrink-0">
+            <div className="text-sm text-muted-foreground">{location}</div>
+            <WorkPeriod start={start} end={end} />
+          </div>
         </div>
 
         <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
@@ -144,7 +147,7 @@ export function WorkExperience({ work }: WorkExperienceProps) {
   return (
     <Section>
       <h2 className="text-xl font-bold" id="work-experience">
-        Work Experience
+        Work and Research Experiences
       </h2>
       <div
         className="space-y-4 print:space-y-0"

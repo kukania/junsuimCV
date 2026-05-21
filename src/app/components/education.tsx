@@ -31,7 +31,7 @@ interface EducationItemProps {
  * Individual education card component
  */
 function EducationItem({ education }: EducationItemProps) {
-  const { school, start, end, degree } = education;
+  const { school, start, end, degree, details } = education;
   const schoolId = `education-${school.toLowerCase().replace(/\s+/g, "-")}`;
 
   return (
@@ -49,6 +49,13 @@ function EducationItem({ education }: EducationItemProps) {
         aria-labelledby={schoolId}
       >
         {degree}
+        {details && details.length > 0 && (
+          <ul className="list-disc list-inside mt-1 text-xs text-foreground/70 print:text-[10px]">
+            {details.map((detail) => (
+              <li key={detail}>{detail}</li>
+            ))}
+          </ul>
+        )}
       </CardContent>
     </Card>
   );

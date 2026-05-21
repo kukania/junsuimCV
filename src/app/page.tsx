@@ -4,10 +4,12 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/education";
 import { Header } from "./components/header";
-import { Projects } from "./components/projects";
 import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
 import { WorkExperience } from "./components/work-experience";
+import { Publications } from "./components/publications";
+import { Patents } from "./components/patents";
+import { AwardsAndGrants } from "./components/awards";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,
@@ -17,20 +19,11 @@ export const metadata: Metadata = {
     description: RESUME_DATA.about,
     type: "profile",
     locale: "en_US",
-    images: [
-      {
-        url: "https://cv.jarocki.me/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: `${RESUME_DATA.name}'s profile picture`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
   },
 };
 
@@ -104,13 +97,28 @@ export default function ResumePage() {
               className="animate-fade-in"
               style={{ animationDelay: "300ms" }}
             >
-              <Skills skills={RESUME_DATA.skills} />
+              <AwardsAndGrants awards={RESUME_DATA.awards} grants={RESUME_DATA.grants} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "375ms" }}
             >
-              <Projects projects={RESUME_DATA.projects} />
+              <Publications
+                publications={RESUME_DATA.publications}
+                domesticPublications={RESUME_DATA.domesticPublications}
+              />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "450ms" }}
+            >
+              <Patents patents={RESUME_DATA.patents} />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "525ms" }}
+            >
+              <Skills skills={RESUME_DATA.skills} />
             </div>
           </div>
         </section>
