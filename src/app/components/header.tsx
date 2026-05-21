@@ -1,6 +1,6 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import type React from "react";
-import { Avatar } from "@/components/avatar";
+
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons/x-icon";
 import { Button } from "@/components/ui/button";
@@ -194,13 +194,6 @@ export function Header() {
           personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
         />
       </div>
-
-      <Avatar
-        className="size-28 ring-1 ring-muted"
-        src={RESUME_DATA.avatarUrl}
-        alt={`${RESUME_DATA.name}'s profile picture`}
-        fallback={RESUME_DATA.initials}
-      />
     </header>
   );
 }

@@ -51,24 +51,18 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Core Data Facebook Counting Infrastructure, Meta",
       link: "https://about.meta.com",
-      badges: ["C++", "Python", "Distributed Systems", "AI Agents", "Incident Response"],
+      badges: [],
       title: "Software Engineer",
       location: "Menlo Park, CA, USA",
       start: "Jul. 2025",
-      end: "May 2026",
-      description: "Infrastructure engineer on a distributed counting platform serving hundreds of billions of QPS across global datacenters. Shipped 90+ code changes across platform reliability, AI-powered tooling, and Redis-compatible API expansion. Handled 5 production incidents, presented at 2 company-wide incident reviews, and received a reliability engineering award.",
+      end: "Current",
+      description: "",
       highlights: [
-        "Data lifecycle optimization: Designed and rolled out an expired-data dropping system across 3 platform tiers (60-phase rollout, zero customer impact)",
-        "Emergency load-shedding CLI: Built a selective load-shedding tool with composable policy framework (by use case, sampling rate, boolean composition) for surgical incident mitigation",
-        "SLO productionization: Built cross-regional consistency monitoring from scratch — dashboards, alerting, severity criteria. Fixed similarity algorithm bugs, traced regional anomalies to root causes",
-        "Incident response: 5 SEVs during on-call (capacity overload, autoscaling regression, proximity degradation). Wrote 4 runbook improvements",
-        "Autonomous rollout agent: Built from scratch an LLM-powered agent that manages multi-phase config rollouts end-to-end (health-based auto-proceed, stepback recovery, async 24hr execution, state persistence)",
-        "CLI & AI safety: Built 9 CLI commands making the platform fully agent-operable. Discovered a critical AI safety gap bypassing dry-run and modifying production quota — presented at 2 company-wide reviews. Implemented access-control gating and guardrails",
-        "Eval framework: 62 test cases across 18 scenarios for validating AI agent capabilities on infrastructure operations",
-        "Implemented String and SortedSet data types for a Redis-compatible API layer on distributed counting infrastructure",
-        "Ported Valkey 9.1 skip list to C++ for sorted set operations",
-        "Built cross-region freshness measurement system — canaried across 4 datacenter regions",
-        "Implemented comparison functions for 14 counter data types to enable safe storage-tier migrations"
+        "Scale & Scope: Managed distributed counting platforms serving 100B+ QPS globally; shipped 90+ code changes across platform reliability, AI-powered automation, and API expansions.",
+        "Data Lifecycle & Tiering: Architected and rolled out automated data-purging systems across multi-tier storage layers with zero user impact; developed core API extensions to support Redis-compatible operations.",
+        "Storage Migration & Engineering: Designed distinct counter comparison frameworks and safe storage-tier migration primitives to ensure data integrity during cross-region infrastructure transitions.",
+        "SLO Metric Design: Architected the monitoring framework for cross-regional consistency and data freshness; designed the core health metrics and measurement methodologies to systematically track global infrastructure health.",
+        "AI & Automation: Developed an end-to-end autonomous LLM rollout agent featuring state persistence and automated recovery alongside an operator-facing CLI suite."
       ],
     },
     {
