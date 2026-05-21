@@ -46,13 +46,14 @@ interface SocialButtonProps {
   href: string;
   iconType: IconType;
   label: string;
+  text?: string;
 }
 
-function SocialButton({ href, iconType, label }: SocialButtonProps) {
+function SocialButton({ href, iconType, label, text }: SocialButtonProps) {
   const IconComponent = ICON_MAP[iconType];
 
   return (
-    <Button className="size-8" variant="outline" size="icon" asChild={true}>
+    <Button className="h-8 px-3 gap-2" variant="outline" size="sm" asChild={true}>
       <a
         href={href}
         aria-label={label}
@@ -60,6 +61,7 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
         rel="noopener noreferrer"
       >
         <IconComponent className="size-4" aria-hidden="true" />
+        {text && <span className="text-xs">{text}</span>}
       </a>
     </Button>
   );
@@ -73,7 +75,7 @@ interface ContactButtonsProps {
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
   return (
     <ul
-      className="flex list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      className="flex flex-wrap list-none gap-2 pt-1 font-mono text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
       {personalWebsiteUrl && (
@@ -82,6 +84,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
             href={personalWebsiteUrl}
             iconType="globe"
             label="Personal website"
+            text="Website"
           />
         </li>
       )}
@@ -91,6 +94,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
             href={`mailto:${contact.email}`}
             iconType="mail"
             label="Email"
+            text={contact.email}
           />
         </li>
       )}
@@ -100,6 +104,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
             href={`tel:${contact.tel}`}
             iconType="phone"
             label="Phone"
+            text={contact.tel}
           />
         </li>
       )}
@@ -109,6 +114,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
             href={social.url}
             iconType={social.icon}
             label={social.name}
+            text={social.name === "LinkedIn" ? "Junsu Im" : social.name}
           />
         </li>
       ))}
