@@ -128,45 +128,51 @@ interface PrintContactProps {
 }
 
 function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
-  return (
-    <div className="hidden gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px]">
-      {personalWebsiteUrl && (() => {
-        try {
-          const hostname = new URL(personalWebsiteUrl).hostname;
-          return (
-            <>
-              <a
-                className="underline hover:text-foreground/70"
-                href={personalWebsiteUrl}
-              >
-                {hostname}
-              </a>
-              <span aria-hidden="true">/</span>
-            </>
-          );
-        } catch {
-          return null;
-        }
-      })()}
-      {contact.email && (
-        <>
-          <a
-            className="underline hover:text-foreground/70"
-            href={`mailto:${contact.email}`}
-          >
-            {contact.email}
-          </a>
-          <span aria-hidden="true">/</span>
-        </>
-      )}
-      {contact.tel && (
-        <a
-          className="underline hover:text-foreground/70"
-          href={`tel:${contact.tel}`}
-        >
-          {contact.tel}
+  const items: React.ReactNode[] = [];
+
+  if (personalWebsiteUrl) {
+    try {
+      const hostname = new URL(personalWebsiteUrl).hostname;
+      items.push(
+        <a key="website" className="underline hover:text-foreground/70" href={personalWebsiteUrl}>
+          {hostname}
         </a>
-      )}
+      );
+    } catch {}
+  }
+
+  if (contact.email) {
+    items.push(
+      <a key="email" className="underline hover:text-foreground/70" href={`mailto:${contact.email}`}>
+        {contact.email}
+      </a>
+    );
+  }
+
+  if (contact.tel) {
+    items.push(
+      <a key="tel" className="underline hover:text-foreground/70" href={`tel:${contact.tel}`}>
+        {contact.tel}
+      </a>
+    );
+  }
+
+  contact.social.forEach((social) => {
+    items.push(
+      <a key={social.name} className="underline hover:text-foreground/70" href={social.url}>
+        {social.url.replace(/^https?:\/\/(www\.)?/, '')}
+      </a>
+    );
+  });
+
+  return (
+    <div className="hidden flex-wrap gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px]">
+      {items.map((item, index) => (
+        <React.Fragment key={index}>
+          {item}
+          {index < items.length - 1 && <span aria-hidden="true">/</span>}
+        </React.Fragment>
+      ))}
     </div>
   );
 }
