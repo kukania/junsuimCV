@@ -58,7 +58,7 @@ export const RESUME_DATA: ResumeData = {
       end: "Current",
       description: "",
       highlights: [
-        "Scale & Scope: Managed distributed counting platforms serving 100B+ QPS globally; shipped 90+ code changes across platform reliability, AI-powered automation, and API expansions.",
+        "Scale & Scope: Managed distributed counting platforms serving billion scale QPS globally; shipped 90+ code changes across platform reliability, AI-powered automation, and API expansions.",
         "Data Lifecycle & Tiering: Architected and rolled out automated data-purging systems across multi-tier storage layers with zero user impact; developed core API extensions to support Redis-compatible operations.",
         "Storage Migration & Engineering: Designed distinct counter comparison frameworks and safe storage-tier migration primitives to ensure data integrity during cross-region infrastructure transitions.",
         "SLO Metric Design: Architected the monitoring framework for cross-regional consistency and data freshness; designed the core health metrics and measurement methodologies to systematically track global infrastructure health.",
