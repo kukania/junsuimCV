@@ -49,7 +49,7 @@ interface WorkPeriodProps {
 function WorkPeriod({ start, end }: WorkPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className="text-sm tabular-nums text-gray-500 print:text-[12px]"
       title={`Employment period: ${start} to ${end ?? "Present"}`}
     >
       {start} - {end ?? "Present"}
@@ -103,7 +103,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
             />
           </h3>
           <div className="text-right shrink-0">
-            <div className="text-sm text-muted-foreground">{location}</div>
+            <div className="text-sm text-muted-foreground print:text-[12px]">{location}</div>
             <WorkPeriod start={start} end={end} />
           </div>
         </div>
