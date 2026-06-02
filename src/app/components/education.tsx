@@ -36,27 +36,31 @@ function EducationItem({ education }: EducationItemProps) {
 
   return (
     <Card className="border-none">
-      <CardHeader>
+      <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
-          <h3 className="font-semibold leading-none" id={schoolId}>
+          <h3 className="font-semibold leading-none print:text-sm" id={schoolId}>
             {school}
           </h3>
-          <EducationPeriod start={start} end={end} />
+          <div className="text-right shrink-0">
+            <EducationPeriod start={start} end={end} />
+          </div>
         </div>
+        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+          {degree}
+        </h4>
       </CardHeader>
-      <CardContent
-        className="mt-2 text-foreground/80 print:text-[12px]"
-        aria-labelledby={schoolId}
-      >
-        {degree}
-        {details && details.length > 0 && (
-          <ul className="list-disc list-inside mt-1 text-xs text-foreground/70 print:text-[10px]">
+      {details && details.length > 0 && (
+        <CardContent
+          className="mt-2 text-foreground/80 print:text-[12px] print:mt-1"
+          aria-labelledby={schoolId}
+        >
+          <ul className="list-disc list-inside text-xs text-foreground/70 print:text-[10px]">
             {details.map((detail) => (
               <li key={detail}>{detail}</li>
             ))}
           </ul>
-        )}
-      </CardContent>
+        </CardContent>
+      )}
     </Card>
   );
 }
