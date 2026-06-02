@@ -1,4 +1,4 @@
-﻿import type { ResumeData } from "@/lib/types";
+import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
   name: "Junsu Im",
@@ -107,7 +107,7 @@ export const RESUME_DATA: ResumeData = {
       link: "https://www.csail.mit.edu",
       badges: [],
       title: "Research Intern",
-      location: "Massachusetts, U.S.A",
+      location: "Cambridge, MA, USA",
       start: "Jul. 2019",
       end: "Aug. 2019",
       description: "",
@@ -126,7 +126,7 @@ export const RESUME_DATA: ResumeData = {
       end: "Feb. 2025",
       description: "",
       highlights: [
-        "Designed and implemented LSM-tree-based key-value storage engines for SSD and network-attached storage environments, targeting high throughput and bounded tail latency; resulted in publications at USENIX ATC and ACM TOS.",
+        "Designed and implemented LSM-tree-based key-value storage engines for SSD and network-attached storage environments, targeting high throughput and bounded tail-latency; resulted in publications at USENIX ATC and ACM TOS.",
         "Designed a transaction-enabled key-value SSD architecture for key-value-based file systems, contributing to research published at OSDI.",
         "Developed memory-efficient metadata indexing and LSM-tree-based FTL algorithms for ultra-large-scale SSDs, resulting in a first-author EuroSys publication.",
         "Implemented and evaluated multiple FTL and caching designs for flash SSDs, analyzing latency, memory overhead, and read/write amplification.",
@@ -200,12 +200,6 @@ export const RESUME_DATA: ResumeData = {
       organization: "SK hynix",
       date: "2022",
       location: "S. Korea",
-    },
-    {
-      title: "Co-inventor on patents related to key-value storage devices and SSD indexing/FTL architectures",
-      organization: "United States and South Korea",
-      date: "",
-      location: "",
     },
   ],
   grants: [],
