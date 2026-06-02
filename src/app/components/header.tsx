@@ -1,5 +1,6 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import type React from "react";
+import { Fragment } from "react";
 
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons/x-icon";
@@ -168,10 +169,10 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   return (
     <div className="hidden flex-wrap gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px]">
       {items.map((item, index) => (
-        <React.Fragment key={index}>
+        <Fragment key={index}>
           {item}
           {index < items.length - 1 && <span aria-hidden="true">/</span>}
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   );
