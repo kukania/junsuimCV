@@ -28,7 +28,7 @@ interface LocationLinkProps {
 
 function LocationLink({ location, locationLink }: LocationLinkProps) {
   return (
-    <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
+    <p className="max-w-md items-center text-pretty text-xs text-foreground">
       <a
         className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
         href={locationLink}
@@ -76,7 +76,7 @@ interface ContactButtonsProps {
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
   return (
     <ul
-      className="flex flex-wrap list-none gap-2 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      className="flex flex-wrap list-none gap-2 pt-1 text-sm text-foreground/80 print:hidden"
       aria-label="Contact links"
     >
       {personalWebsiteUrl && (
@@ -167,7 +167,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   });
 
   return (
-    <div className="hidden flex-wrap gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px]">
+    <div className="hidden flex-wrap gap-x-2 text-sm text-foreground/80 print:flex print:text-[12px]">
       {items.map((item, index) => (
         <Fragment key={index}>
           {item}
@@ -188,7 +188,7 @@ export function Header() {
         <h1 className="text-3xl font-bold tracking-tight" id="resume-name">
           {RESUME_DATA.name}
         </h1>
-        <p className="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]">
+        <p className="max-w-md text-pretty text-sm text-foreground/80 print:text-[12px]">
           {RESUME_DATA.about}
         </p>
 

@@ -45,7 +45,7 @@ function EducationItem({ education }: EducationItemProps) {
             <EducationPeriod start={start} end={end} />
           </div>
         </div>
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+        <h4 className="text-sm font-semibold leading-none print:text-[12px]">
           {degree}
         </h4>
       </CardHeader>
