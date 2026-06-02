@@ -136,7 +136,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       const hostname = new URL(personalWebsiteUrl).hostname;
       items.push(
         <a key="website" className="underline hover:text-foreground/70" href={personalWebsiteUrl}>
-          {hostname}
+          Personal Website
         </a>
       );
     } catch {}
@@ -161,7 +161,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   contact.social.forEach((social) => {
     items.push(
       <a key={social.name} className="underline hover:text-foreground/70" href={social.url}>
-        {social.url.replace(/^https?:\/\/(www\.)?/, '')}
+        {social.name}
       </a>
     );
   });

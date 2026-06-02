@@ -1,4 +1,4 @@
-import type { ResumeData } from "@/lib/types";
+﻿import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
   name: "Junsu Im",
@@ -29,7 +29,7 @@ export const RESUME_DATA: ResumeData = {
   education: [
     {
       school: "Daegu Gyeongbuk Institute of Science and Technology (DGIST)",
-      degree: "PhD in Department of Electrical Engineering and Computer Science (EECS)",
+      degree: "Ph.D. in Electrical Engineering and Computer Science",
       start: "Mar. 2018",
       end: "Feb. 2025",
       details: [
@@ -46,7 +46,7 @@ export const RESUME_DATA: ResumeData = {
   ],
   work: [
     {
-      company: "Core Data Facebook Counting Infrastructure, Meta",
+      company: "Meta — Core Data, Facebook Counting Infrastructure",
       link: "https://about.meta.com",
       badges: [],
       title: "Software Engineer",
@@ -64,7 +64,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      company: "CAOSLAB, POSTECH",
+      company: "POSTECH — CAOSLAB",
       link: "https://www.postech.ac.kr",
       badges: [],
       title: "Postdoctoral Researcher",
@@ -77,7 +77,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      company: "Network Delivery Engineering, Meta",
+      company: "Meta — Network Delivery Engineering",
       link: "https://about.meta.com",
       badges: [],
       title: "Software Engineering Intern",
@@ -90,7 +90,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      company: "Storage Architecture Team, Memory System Research, SK hynix",
+      company: "SK hynix — Storage Architecture Team, Memory System Research",
       link: "https://www.skhynix.com",
       badges: [],
       title: "Research Intern",
@@ -103,7 +103,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      company: "CSAIL, EECS, Massachusetts Institute of Technology",
+      company: "MIT CSAIL",
       link: "https://www.csail.mit.edu",
       badges: [],
       title: "Research Intern",
@@ -117,7 +117,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      company: "DataLab, EECS, DGIST",
+      company: "DGIST — DataLab",
       link: "https://www.dgist.ac.kr",
       badges: [],
       title: "Ph.D. Researcher, Storage Systems",

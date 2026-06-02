@@ -28,15 +28,7 @@ function PublicationItem({ publication }: PublicationItemProps) {
           ),
         }}
       />
-      , {title}, in {venue}, {year}
-      {note && (
-        <Badge
-          variant="secondary"
-          className="ml-1 bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200 px-1 py-0 text-[10px] print:text-[8px]"
-        >
-          🏆 {note}
-        </Badge>
-      )}
+      , {title}, in {venue}, {year}{note ? `. ${note}.` : ""}
     </li>
   );
 }
