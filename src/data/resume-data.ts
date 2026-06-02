@@ -5,9 +5,9 @@ export const RESUME_DATA: ResumeData = {
   initials: "JI",
   location: "Mountain View, CA, USA",
   locationLink: "https://www.google.com/maps/place/Mountain+View,+CA",
-  about: "Software Engineer at Meta specializing in distributed systems and storage architecture.",
+  about: "Software Engineer | Distributed Data and Storage Systems",
   summary:
-    "Software Engineer at Meta with deep expertise in distributed in-memory caching systems. PhD from DGIST with extensive research in LSM-tree based key-value stores, SSD architecture, and storage systems. Published in top-tier venues including EuroSys, OSDI, and USENIX ATC (Best Paper Award). Previously interned at MIT CSAIL and SK Hynix.",
+    "Software Engineer and Storage Systems Ph.D. specializing in high-performance distributed data systems, key-value storage engines, and storage architecture. Built production distributed infrastructure at Meta serving billion-scale global QPS, contributing to multi-tier data lifecycle management, safe storage migration, API extensions, and cross-region consistency observability. Published systems research in EuroSys, OSDI, and USENIX ATC, including an ATC Best Paper Award, with expertise in LSM-tree storage engines, transactional key-value systems, MyRocks-based data processing, SSD/NVMe architecture, and C/C++ performance optimization.",
   avatarUrl: "",
   personalWebsiteUrl: "",
   contact: {
@@ -34,7 +34,6 @@ export const RESUME_DATA: ResumeData = {
       end: "Feb. 2025",
       details: [
         "Advisor: Sungjin Lee",
-        "GPA 3.78/4.3",
       ],
     },
     {
@@ -42,9 +41,7 @@ export const RESUME_DATA: ResumeData = {
       degree: "B.S. in Computer Science and Engineering",
       start: "Mar. 2012",
       end: "Feb. 2018",
-      details: [
-        "GPA 3.75/4.5",
-      ],
+      details: [],
     },
   ],
   work: [
@@ -58,11 +55,12 @@ export const RESUME_DATA: ResumeData = {
       end: "Current",
       description: "",
       highlights: [
-        "Scale & Scope: Managed distributed counting platforms serving billion scale QPS globally; shipped 90+ code changes across platform reliability, AI-powered automation, and API expansions.",
-        "Data Lifecycle & Tiering: Architected and rolled out automated data-purging systems across multi-tier storage layers with zero user impact; developed core API extensions to support Redis-compatible operations.",
-        "Storage Migration & Engineering: Designed distinct counter comparison frameworks and safe storage-tier migration primitives to ensure data integrity during cross-region infrastructure transitions.",
-        "SLO Metric Design: Architected the monitoring framework for cross-regional consistency and data freshness; designed the core health metrics and measurement methodologies to systematically track global infrastructure health.",
-        "AI & Automation: Developed an end-to-end autonomous LLM rollout agent featuring state persistence and automated recovery alongside an operator-facing CLI suite."
+        "Scale & Scope: Managed distributed stateful infrastructure serving billion-scale global QPS across regions.",
+        "Data Lifecycle & Tiering: Architected and rolled out automated data lifecycle management and purging across multi-tier storage layers with zero user impact.",
+        "Storage Migration & Engineering: Designed safe storage migration primitives to ensure data integrity during cross-region infrastructure transitions.",
+        "SLO Metric Design: Architected monitoring framework and SLO metrics for cross-regional consistency and data freshness observability.",
+        "API Extensibility: Developed core API extensions to support Redis-compatible NoSQL/cache platform operations.",
+        "AI & Automation: Developed an autonomous LLM rollout agent with persistent state and automated recovery alongside an operator-facing CLI suite."
       ],
     },
     {
@@ -75,7 +73,7 @@ export const RESUME_DATA: ResumeData = {
       end: "Jun. 2025",
       description: "",
       highlights: [
-        "Researching on LSM-tree based key-value stores",
+        "Researching on high-performance LSM-tree storage engine focusing on data-intensive workloads and system-level performance optimization.",
       ],
     },
     {
@@ -101,7 +99,9 @@ export const RESUME_DATA: ResumeData = {
       end: "Feb. 2023",
       description: "",
       highlights: [
-        "Designing HTAP friendly LSM-tree based key-value store",
+        "Designed HTAP-friendly LSM-tree based key-value store optimized for mixed OLTP/OLAP workloads.",
+        "Evaluated storage-engine design and transactional performance trade-offs.",
+        "Analyzed analytical query efficiency for column-oriented layouts in RocksDB/MyRocks environments.",
       ],
     },
     {
@@ -128,24 +128,30 @@ export const RESUME_DATA: ResumeData = {
       end: "Feb. 2025",
       description: "",
       highlights: [
-        "Designing and implementing LSM-tree based FTL algorithms and approximate indexing for ultra-large scale SSD",
-        "Implementing various FTL algorithms including DFTL, Page-level FTL, S-FTL and TP-FTL",
-        "Designing and implementing transaction enabled key-value SSD for key-value based file system",
-        "Designing and implementing LSM-tree based key-value SSD on an embedded board",
-        "Designing and implementing cache partitioning methods for short tail latency of demand-based FTL",
-        "Implementing LSM-tree based key-value engine for network-attached key-value storage device",
+        "LSM-tree based KV storage engine: Designed and implemented LSM-tree based key-value SSD on an embedded board, including network-attached key-value storage devices.",
+        "Transaction-enabled KV storage: Designed and implemented transaction-enabled key-value SSD for key-value based file systems.",
+        "Memory-efficient storage metadata indexing: Designed and implemented approximate indexing and LSM-tree based FTL algorithms for ultra-large scale SSDs.",
+        "SSD/FTL performance optimization: Implemented various FTL algorithms (DFTL, Page-level FTL, S-FTL, TP-FTL) and designed cache partitioning methods for short tail latency.",
       ],
     },
   ],
   skills: [
-    "Distributed Systems",
-    "LSM-tree",
-    "Key-Value Stores",
-    "SSD Architecture",
-    "FTL Algorithms",
-    "C/C++",
-    "Systems Programming",
-    "Storage Systems",
+    {
+      category: "Distributed Systems & Infrastructure",
+      items: ["Distributed data systems", "distributed caching", "storage migration", "consistency observability", "data lifecycle management", "reliability engineering"],
+    },
+    {
+      category: "Database & Storage Systems",
+      items: ["LSM-tree", "key-value stores", "RocksDB", "MyRocks", "HTAP", "transactional storage", "storage metadata indexing", "SSD/NVMe", "FTL"],
+    },
+    {
+      category: "Systems Engineering",
+      items: ["C/C++", "Python", "Linux", "multithreaded systems", "performance profiling", "benchmarking", "tail-latency optimization"],
+    },
+    {
+      category: "Research & Evaluation",
+      items: ["Storage architecture", "OLTP/OLAP workload analysis", "throughput and latency evaluation", "memory and read/write amplification analysis"],
+    },
   ],
   publications: [
     {
@@ -174,139 +180,23 @@ export const RESUME_DATA: ResumeData = {
       note: "Awarded Best Paper",
     },
     {
-      title: "Probability-based Address Translation for Flash SSDs",
-      authors: "J. Im, H. Kim, Y. Won, J. Oh, M. Kim, and S. Lee",
-      venue: "IEEE Computer Architecture Letters, vol. 19, no. 12, pp. 97–100",
-      year: "2020",
-    },
-    {
       title: "LightStore: Software-defined Network-attached Key-value Drives",
       authors: "C. Chung, J. Koo, J. Im, Arvind, and S. Lee",
       venue: "proceedings of the International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
       year: "2019",
     },
   ],
-  domesticPublications: [
-    {
-      title: "Demand-based FTL Cache Partitioning for Large Capacity SSDs",
-      authors: "J. Bae, H. Kim, J. Im, and S. Lee",
-      venue: "IEMEK Journal of Embedded Systems and Applications",
-      year: "2019",
-    },
-    {
-      title: "Address Translation with Bounded Tail Latency for Large Capacity SSDs",
-      authors: "H. Kim, J. Bae, J. Im, and S. Lee",
-      venue: "Journal of KIISE",
-      year: "2018",
-    },
-    {
-      title: "High-performance Distributed Key-value Solid state Disks",
-      authors: "J. Koo, J. Im, S. Lee",
-      venue: "Journal of KIISE",
-      year: "2018",
-    },
-  ],
-  patents: [
-    {
-      title: "Key Value Storage Device, Host and Host Storage System",
-      authors: "S. Lee, J. Koo, J. Im, J. Park",
-      patentNumber: "China Patent No.202210688337.0",
-      year: "2022",
-    },
-    {
-      title: "Key Value Storage Device, Host and Host Storage System",
-      authors: "S. Lee, J. Koo, J. Im, J. Park",
-      patentNumber: "U.S. Patent No.17-807933",
-      year: "2022",
-    },
-    {
-      title: "Key-Value Storage Device, Host and Host-Storage System",
-      authors: "S. Lee, J. Koo, J. Im, J. Park",
-      patentNumber: "Korea Patent Pending No.10-2022-0034937",
-      year: "2022",
-    },
-    {
-      title: "SSD DEVICE AND OPERATING METHOD OF THE SAME USING FTL BASED ON LSM-TREE AND APPROXIMATE INDEXING",
-      authors: "S. Lee, J. Kim, J. Im, M. Kim",
-      patentNumber: "Korea Patent No. 10-2706442",
-      year: "",
-    },
-    {
-      title: "Method for demand-based FTL cache partitioning of SSDs",
-      authors: "J. Bae, S. Lee, J. Im",
-      patentNumber: "Korea Patent No.10-2416880",
-      year: "",
-    },
-  ],
+  domesticPublications: [],
+  patents: [],
   awards: [
-    {
-      title: "Best Student Award",
-      organization: "DGIST",
-      date: "Sep. 2020",
-      location: "S. Korea",
-    },
-    {
-      title: "Kyu-Young Whang Out Standing Research Award",
-      organization: "ICE, DGIST",
-      date: "Aug. 2020",
-      location: "S. Korea",
-    },
     {
       title: "Best Paper Award",
       organization: "USENIX Annual Technical Conference (ATC'20)",
       date: "Jul. 2020",
       location: "U.S.A",
     },
-    {
-      title: "Best Student Poster Award",
-      organization: "Daegu Technopolis Grand Innovation Festival (DGIF)",
-      date: "Dec. 2018",
-      location: "S. Korea",
-    },
-    {
-      title: "Bronze Award in Capstone Design Fair",
-      organization: "Inha University",
-      date: "Sep. 2016",
-      location: "S. Korea",
-    },
-    {
-      title: "Dean's list",
-      organization: "Inha University",
-      date: "Aug. 2016",
-      location: "S. Korea",
-    },
-    {
-      title: "Grand Prize in Programming Competition",
-      organization: "Inha University",
-      date: "Nov. 2015",
-      location: "S. Korea",
-    },
   ],
   grants: [
-    {
-      title: "Student Travel Grant",
-      organization: "The Association for Computing Machinery (ACM), Eurosys25",
-      date: "Apr. 2025",
-      location: "Netherlands",
-    },
-    {
-      title: "Student Travel Grant",
-      organization: "The USENIX Association, OSDI'21",
-      date: "Jul. 2021",
-      location: "U.S.A",
-    },
-    {
-      title: "Student Travel Grant",
-      organization: "The USENIX Association, ATC'20",
-      date: "Jul. 2020",
-      location: "U.S.A",
-    },
-    {
-      title: "Student Travel Grant",
-      organization: "The Association for Computing Machinery (ACM), ASPLOS'19",
-      date: "Apr. 2019",
-      location: "U.S.A",
-    },
     {
       title: "Ph.D. Scholarship Student",
       organization: "SK Hynix",

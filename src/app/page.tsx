@@ -85,23 +85,29 @@ export default function ResumePage() {
               className="animate-fade-in"
               style={{ animationDelay: "150ms" }}
             >
-              <WorkExperience work={RESUME_DATA.work} />
+              <Skills skills={RESUME_DATA.skills} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "225ms" }}
             >
-              <Education education={RESUME_DATA.education} />
+              <WorkExperience work={RESUME_DATA.work} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "300ms" }}
             >
-              <AwardsAndGrants awards={RESUME_DATA.awards} grants={RESUME_DATA.grants} />
+              <Education education={RESUME_DATA.education} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "375ms" }}
+            >
+              <AwardsAndGrants awards={RESUME_DATA.awards} grants={RESUME_DATA.grants} />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "450ms" }}
             >
               <Publications
                 publications={RESUME_DATA.publications}
@@ -110,15 +116,9 @@ export default function ResumePage() {
             </div>
             <div
               className="animate-fade-in"
-              style={{ animationDelay: "450ms" }}
-            >
-              <Patents patents={RESUME_DATA.patents} />
-            </div>
-            <div
-              className="animate-fade-in"
               style={{ animationDelay: "525ms" }}
             >
-              <Skills skills={RESUME_DATA.skills} />
+              <Patents patents={RESUME_DATA.patents} />
             </div>
           </div>
         </section>
