@@ -7,7 +7,7 @@ export const RESUME_DATA: ResumeData = {
   locationLink: "https://www.google.com/maps/place/Mountain+View,+CA",
   about: "Software Engineer | Distributed Data and Storage Systems",
   summary:
-    "Software Engineer and Storage Systems Ph.D. specializing in high-performance distributed data systems, key-value storage engines, and storage architecture. Built production distributed infrastructure at Meta serving billion-scale global QPS, contributing to multi-tier data lifecycle management, safe storage migration, API extensions, and cross-region consistency observability. Published systems research in EuroSys, OSDI, and USENIX ATC, including an ATC Best Paper Award, with expertise in LSM-tree storage engines, transactional key-value systems, MyRocks-based data processing, SSD/NVMe architecture, and C/C++ performance optimization.",
+    "Software Engineer and Storage Systems Ph.D. specializing in high-performance distributed infrastructure, key-value storage engines, and storage architecture. Built production distributed infrastructure at Meta serving billion-scale global QPS, contributing to multi-tier data lifecycle management, safe storage migration, API extensions, and cross-region consistency observability. Published systems research in EuroSys, OSDI, and USENIX ATC, including an ATC Best Paper Award, with hands-on expertise in LSM-tree storage engines, transactional key-value systems, SSD/NVMe architecture, storage metadata indexing, and C/C++ performance optimization.",
   avatarUrl: "",
   personalWebsiteUrl: "",
   contact: {
@@ -55,12 +55,12 @@ export const RESUME_DATA: ResumeData = {
       end: "Current",
       description: "",
       highlights: [
-        "Scale & Scope: Managed distributed stateful infrastructure serving billion-scale global QPS across regions.",
-        "Data Lifecycle & Tiering: Architected and rolled out automated data lifecycle management and purging across multi-tier storage layers with zero user impact.",
-        "Storage Migration & Engineering: Designed safe storage migration primitives to ensure data integrity during cross-region infrastructure transitions.",
-        "SLO Metric Design: Architected monitoring framework and SLO metrics for cross-regional consistency and data freshness observability.",
-        "API Extensibility: Developed core API extensions to support Redis-compatible NoSQL/cache platform operations.",
-        "AI & Automation: Developed an autonomous LLM rollout agent with persistent state and automated recovery alongside an operator-facing CLI suite."
+        "Developed and shipped 90+ production code changes for distributed stateful infrastructure serving billion-scale global QPS across regions, spanning platform reliability, automation, and API capabilities.",
+        "Designed and rolled out automated data lifecycle management and purging mechanisms across multi-tier storage layers with zero user impact.",
+        "Built safe storage-tier migration and counter-comparison primitives to preserve data integrity during cross-region infrastructure transitions.",
+        "Designed a monitoring framework and core health metrics for cross-region consistency and data freshness, improving observability for globally distributed stateful services.",
+        "Extended core APIs to support Redis-compatible operations and broader cache/storage use cases.",
+        "Developed an autonomous LLM rollout agent with persistent state, automated recovery, and operator-facing CLI workflows."
       ],
     },
     {
@@ -73,7 +73,7 @@ export const RESUME_DATA: ResumeData = {
       end: "Jun. 2025",
       description: "",
       highlights: [
-        "Researching on high-performance LSM-tree storage engine focusing on data-intensive workloads and system-level performance optimization.",
+        "Conducted research on high-performance LSM-tree-based key-value storage systems for data-intensive workloads, focusing on system-level performance optimization.",
       ],
     },
     {
@@ -86,11 +86,11 @@ export const RESUME_DATA: ResumeData = {
       end: "Sep. 2024",
       description: "",
       highlights: [
-        "Developing Thrift API and designing auto-generation code tool",
+        "Developed Thrift APIs and designed code-generation tooling for production network infrastructure services.",
       ],
     },
     {
-      company: "Storage Architecture Team, Memory System Research, SK Hynix",
+      company: "Storage Architecture Team, Memory System Research, SK hynix",
       link: "https://www.skhynix.com",
       badges: [],
       title: "Research Intern",
@@ -99,9 +99,7 @@ export const RESUME_DATA: ResumeData = {
       end: "Feb. 2023",
       description: "",
       highlights: [
-        "Designed HTAP-friendly LSM-tree based key-value store optimized for mixed OLTP/OLAP workloads.",
-        "Evaluated storage-engine design and transactional performance trade-offs.",
-        "Analyzed analytical query efficiency for column-oriented layouts in RocksDB/MyRocks environments.",
+        "Explored the feasibility of improving LSM-tree-based storage organization for data-intensive workloads in modern storage systems.",
       ],
     },
     {
@@ -114,35 +112,35 @@ export const RESUME_DATA: ResumeData = {
       end: "Aug. 2019",
       description: "",
       highlights: [
-        "Designing LSM-tree-based key-value store engine for key-value SSD",
-        "Integrating HW accelerator into LSM-tree based key-value store for optimizing of its write performance",
+        "Designed an LSM-tree-based key-value storage engine for key-value SSDs.",
+        "Integrated a hardware accelerator into the storage-engine data path to optimize write performance.",
       ],
     },
     {
       company: "DataLab, EECS, DGIST",
       link: "https://www.dgist.ac.kr",
       badges: [],
-      title: "Ph.D. Student",
+      title: "Ph.D. Researcher, Storage Systems",
       location: "Daegu, S. Korea",
       start: "Feb. 2018",
       end: "Feb. 2025",
       description: "",
       highlights: [
-        "LSM-tree based KV storage engine: Designed and implemented LSM-tree based key-value SSD on an embedded board, including network-attached key-value storage devices.",
-        "Transaction-enabled KV storage: Designed and implemented transaction-enabled key-value SSD for key-value based file systems.",
-        "Memory-efficient storage metadata indexing: Designed and implemented approximate indexing and LSM-tree based FTL algorithms for ultra-large scale SSDs.",
-        "SSD/FTL performance optimization: Implemented various FTL algorithms (DFTL, Page-level FTL, S-FTL, TP-FTL) and designed cache partitioning methods for short tail latency.",
+        "Designed and implemented LSM-tree-based key-value storage engines for SSD and network-attached storage environments, targeting high throughput and bounded tail latency; resulted in publications at USENIX ATC and ACM TOS.",
+        "Designed a transaction-enabled key-value SSD architecture for key-value-based file systems, contributing to research published at OSDI.",
+        "Developed memory-efficient metadata indexing and LSM-tree-based FTL algorithms for ultra-large-scale SSDs, resulting in a first-author EuroSys publication.",
+        "Implemented and evaluated multiple FTL and caching designs for flash SSDs, analyzing latency, memory overhead, and read/write amplification.",
       ],
     },
   ],
   skills: [
     {
       category: "Distributed Systems & Infrastructure",
-      items: ["Distributed data systems", "distributed caching", "storage migration", "consistency observability", "data lifecycle management", "reliability engineering"],
+      items: ["Distributed stateful services", "distributed caching", "storage migration", "consistency and freshness observability", "data lifecycle management"],
     },
     {
       category: "Database & Storage Systems",
-      items: ["LSM-tree", "key-value stores", "RocksDB", "MyRocks", "HTAP", "transactional storage", "storage metadata indexing", "SSD/NVMe", "FTL"],
+      items: ["LSM-tree", "key-value stores", "RocksDB", "transactional storage", "storage metadata indexing", "SSD/NVMe", "flash translation layers"],
     },
     {
       category: "Systems Engineering",
@@ -150,7 +148,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       category: "Research & Evaluation",
-      items: ["Storage architecture", "OLTP/OLAP workload analysis", "throughput and latency evaluation", "memory and read/write amplification analysis"],
+      items: ["Storage architecture", "throughput and latency evaluation", "memory-efficiency analysis", "read/write amplification analysis"],
     },
   ],
   publications: [
@@ -159,6 +157,7 @@ export const RESUME_DATA: ResumeData = {
       authors: "J. Im, J. Kim, S. Oh, J. Koo, J. Park, S. Lee",
       venue: "proceedings of the European Conference on Computer Systems (EuroSys)",
       year: "2025",
+      note: "First author",
     },
     {
       title: "Modernizing File System through In-Storage Indexing",
@@ -171,13 +170,14 @@ export const RESUME_DATA: ResumeData = {
       authors: "J. Im, J. Bae, C. Chung, Arvind, and S. Lee",
       venue: "ACM Transactions on Storage, vol. 19, no. 2, pp. 1–27",
       year: "2021",
+      note: "First author",
     },
     {
       title: "PinK: High-speed In-storage Key-value Store with Bounded Tails",
       authors: "J. Im, J. Bae, C. Chung, Arvind, and S. Lee",
       venue: "proceedings of the USENIX Annual Technical Conference (ATC)",
       year: "2020",
-      note: "Awarded Best Paper",
+      note: "First author; Best Paper Award",
     },
     {
       title: "LightStore: Software-defined Network-attached Key-value Drives",
@@ -191,18 +191,23 @@ export const RESUME_DATA: ResumeData = {
   awards: [
     {
       title: "Best Paper Award",
-      organization: "USENIX Annual Technical Conference (ATC'20)",
-      date: "Jul. 2020",
+      organization: "USENIX Annual Technical Conference (ATC)",
+      date: "2020",
       location: "U.S.A",
     },
-  ],
-  grants: [
     {
       title: "Ph.D. Scholarship Student",
-      organization: "SK Hynix",
-      date: "Jul. 2022",
+      organization: "SK hynix",
+      date: "2022",
       location: "S. Korea",
     },
+    {
+      title: "Co-inventor on patents related to key-value storage devices and SSD indexing/FTL architectures",
+      organization: "United States and South Korea",
+      date: "",
+      location: "",
+    },
   ],
+  grants: [],
   projects: [],
 } as const;

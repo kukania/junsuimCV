@@ -39,29 +39,15 @@ export function AwardsAndGrants({ awards, grants }: AwardsAndGrantsProps) {
   return (
     <Section>
       <h2 className="text-xl font-bold" id="awards-section">
-        Awards & Grants
+        Selected Recognition
       </h2>
 
       <div className="space-y-3 print:space-y-1">
         {awards.length > 0 && (
-          <div>
-            <h3 className="text-sm font-semibold mb-1.5">Awards</h3>
-            <div className="space-y-1.5 print:space-y-0.5" aria-labelledby="awards-section">
-              {awards.map((award) => (
-                <AwardItem key={`${award.title}-${award.date}`} item={award} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {grants.length > 0 && (
-          <div>
-            <h3 className="text-sm font-semibold mb-1.5">Grants & Scholarships</h3>
-            <div className="space-y-1.5 print:space-y-0.5">
-              {grants.map((grant) => (
-                <AwardItem key={`${grant.title}-${grant.date}`} item={grant} />
-              ))}
-            </div>
+          <div className="space-y-1.5 print:space-y-0.5" aria-labelledby="awards-section">
+            {awards.map((award) => (
+              <AwardItem key={`${award.title}-${award.date}`} item={award} />
+            ))}
           </div>
         )}
       </div>

@@ -50,12 +50,11 @@ export function Publications({ publications, domesticPublications }: Publication
   return (
     <Section>
       <h2 className="text-xl font-bold" id="publications-section">
-        Publications
+        Selected Publications
       </h2>
 
       <div className="space-y-3 print:space-y-1">
         <div>
-          <h3 className="text-sm font-semibold mb-1">International Publications</h3>
           <ol
             className="list-decimal list-inside space-y-1.5 print:space-y-0.5"
             aria-labelledby="publications-section"
