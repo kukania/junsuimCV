@@ -7,7 +7,7 @@ export const RESUME_DATA: ResumeData = {
   locationLink: "https://www.google.com/maps/place/Mountain+View,+CA",
   about: "Software Engineer | Distributed Data and Storage Systems",
   summary:
-    "Software Engineer and Storage Systems Ph.D. specializing in high-performance distributed infrastructure, key-value storage engines, and storage architecture. Built production distributed infrastructure at Meta serving billion-scale global QPS, contributing to multi-tier data lifecycle management, safe storage migration, API extensions, and cross-region consistency observability. Published systems research in EuroSys, OSDI, and USENIX ATC, including an ATC Best Paper Award, with hands-on expertise in LSM-tree storage engines, transactional key-value systems, SSD/NVMe architecture, storage metadata indexing, and C/C++ performance optimization.",
+    "Software Engineer and Storage Systems Ph.D. specializing in high-performance distributed infrastructure, key-value storage engines, and storage architecture. Built production distributed infrastructure at Meta serving billion-scale global QPS, contributing to safe storage migration, API extensions, and cross-region consistency observability. Published systems research in EuroSys, OSDI, and USENIX ATC, including an ATC Best Paper Award, with hands-on expertise in LSM-tree storage engines, transactional key-value systems, SSD/NVMe architecture, storage metadata indexing, and C/C++ performance optimization.",
   avatarUrl: "",
   personalWebsiteUrl: "",
   contact: {
@@ -56,7 +56,7 @@ export const RESUME_DATA: ResumeData = {
       description: "",
       highlights: [
         "Developed and shipped 90+ production code changes for distributed stateful infrastructure serving billion-scale global QPS across regions, spanning platform reliability, automation, and API capabilities.",
-        "Designed and rolled out automated data lifecycle management and purging mechanisms across multi-tier storage layers with zero user impact.",
+        "Designed and rolled out data purging mechanisms across multi-tier storage layers.",
         "Built safe storage-tier migration and counter-comparison primitives to preserve data integrity during cross-region infrastructure transitions.",
         "Designed a monitoring framework and core health metrics for cross-region consistency and data freshness, improving observability for globally distributed stateful services.",
         "Extended core APIs to support Redis-compatible operations and broader cache/storage use cases.",
@@ -136,7 +136,7 @@ export const RESUME_DATA: ResumeData = {
   skills: [
     {
       category: "Distributed Systems & Infrastructure",
-      items: ["Distributed stateful services", "distributed caching", "storage migration", "consistency and freshness observability", "data lifecycle management"],
+      items: ["Distributed stateful services", "distributed caching", "storage migration", "consistency and freshness observability"],
     },
     {
       category: "Database & Storage Systems",
