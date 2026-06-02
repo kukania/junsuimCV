@@ -21,8 +21,8 @@ function AwardItem({ item }: AwardItemProps) {
             <span className="text-foreground/80">, {organization}</span>
           </div>
           <div className="flex items-center gap-x-2 shrink-0">
-            <span className="text-foreground/60">{location}</span>
-            <span className="tabular-nums text-gray-500">{date}</span>
+            <span className="text-muted-foreground print:text-[10px]">{location}</span>
+            <span className="tabular-nums text-muted-foreground print:text-[10px]">{date}</span>
           </div>
         </div>
       </CardHeader>

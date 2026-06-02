@@ -15,7 +15,7 @@ interface EducationPeriodProps {
 function EducationPeriod({ start, end }: EducationPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500 print:text-[12px]"
+      className="text-xs tabular-nums text-muted-foreground print:text-[10px]"
       title={`Period: ${start} to ${end}`}
     >
       {start} - {end}
